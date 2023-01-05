@@ -3,6 +3,7 @@
 import React, {useState} from "react";
 import button from "bootstrap/js/src/button";
 import Greeting from "./Greeting";
+import UserStatus from "./UserStatus";
 
 function LoginButton(props) {
     return (
@@ -43,7 +44,10 @@ function LoginControl(props) {
         <div>
             <Greeting isLoggedIn={isLoggedIn} />
             {/* 엘리먼트 변수에 저장된 리액트 컴포넌트가 출력된다 */}
+            {/*UserStatus 이후 추가됨*/}
             {button}
+            { isLoggedIn ? <LogoutButton onClick={handleLogoutClick} /> : <LoginButton onClick={handleLoginClick} /> }
+            <UserStatus isLoggedIn={isLoggedIn} />
         </div>
     );
 }
