@@ -9,6 +9,11 @@ import App4 from "./App4";
 import App5 from "./App5";
 import App6 from "./App6";
 import App7 from "./App7";
+import {BrowserRouter, Route, Routes} from "react-router-dom";
+import NoPage from "./Pages/NoPage";
+import Board from "./Board";
+import Main from "./Main";
+import Info from "./Info";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -22,7 +27,18 @@ root.render(
         {/*<App4 />*/}
         {/*<App5 />*/}
         {/*<App6 />*/}
-        <App7 />
+        {/*<App7 />*/}
+
+        <BrowserRouter>
+            <Routes>
+                <Route path={"/"} element={<App2 />}>
+                    <Route index element={<Main />} />
+                    <Route path={"board"} element={<Board />} />
+                    <Route path={"about"} element={<Info />} />
+                    <Route path={"*"} element={<NoPage />} />
+                </Route>
+            </Routes>
+        </BrowserRouter>
     </React.StrictMode>
 );
 
