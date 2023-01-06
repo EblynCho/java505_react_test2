@@ -3,6 +3,7 @@ import Calculator from "./folder4/Calculator";
 import App from "./folder4/App";
 import App2 from "./folder4/App2";
 import DarkOrLight from "./folder4/DarkOrLight";
+import App4 from "./folder4/App4";
 
 function App7(props) {
     return (
@@ -10,10 +11,12 @@ function App7(props) {
             {/*<Calculator />*/}
             {/*<hr/>*/}
             {/*<App />*/}
+            {/*<hr/>*/}
+            {/*<App2 />*/}
+            {/*<hr/>*/}
+            {/*<DarkOrLight />*/}
             <hr/>
-            <App2 />
-            <hr/>
-            <DarkOrLight />
+            <App4 />
         </div>
     );
 }
