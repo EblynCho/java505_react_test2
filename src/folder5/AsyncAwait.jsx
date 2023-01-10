@@ -35,7 +35,7 @@ function AsyncAwait(props) {
     // async/await 사용 시 비동기 처리 방법
     const logItem2 = async () => {
         const resultItems = await fetchItems();
-        // resultItems.then(() => {  // 이렇게 then/catch 쓰기도 가능
+        // resultItems.then(() => {  // 이렇게 then/catch 쓰기도 가능(async/await 와 함께 사용 시 then() 필요할 경우 나중에 호출할 수 있음)
         //
         // })
         //     .catch(() => {
