@@ -60,7 +60,11 @@ function App7(props) {
         // 사용법 :
         // 기존 url?파라미터1=값1&파라미터2=값2
 
-
+        // useNavigate() : Link 컴포넌트를 사용하지 않고 다른 페이지로 이동하는 훅
+        // 사용법 :
+        // const navigate = useNavigate();
+        // navigate(-1)  // History 를 사용하여 뒤 페이지로 이동, 숫자를 음수로 입력 시 해당 뒤로 이동 이고, 양수로 입력 시 앞으로 이동
+        // navigate('/url')  // 지정한 url 로 이동
 
         <BrowserRouter>
             <Routes>
