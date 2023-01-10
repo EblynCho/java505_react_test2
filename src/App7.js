@@ -11,6 +11,8 @@ import Home from "./Pages/Home";
 import Blogs from "./Pages/Blogs";
 import Contact from "./Pages/Contact";
 import NoPage from "./Pages/NoPage";
+import Board from "./Pages/Board";
+import Board2 from "./Pages/Board2";
 
 function App7(props) {
     return (
@@ -35,13 +37,42 @@ function App7(props) {
         //      to : url 주소 입력, Route 컴포넌트에 path 로 설정된 주소 입력
         // <Outlet> : 현재 선택된 경로의 컴포넌트를 화면에 표시
 
+        // URL 파라미터 : restful 방식의 주소형태로 구성되는 파라미터
+        // 기존 url 뒤에 /와 :파라미터명을 사용하여 데이터를 전달하는 방식
+        // rest 방식에서 많이 사용함
+        // 연결된 컴포넌트에서 useParams 훅을 사용해야 함
+        // 사용법 :
+        // 기존url/:파라미터1/:파라미터2
+        // <Route path={url/:test1/:test2} element={<Url />} />
+
+        // 쿼리스트링 : 기존의 get 방식으로 웹 브라우저의 주소에 파라미터를 함께 전달하는 방식
+        // <Route> 컴포넌트의 path 에 변경이 없음
+        // 지정된 컴포넌트에서 몇가지 옵션 사항을 사용할 수 있음
+        //  옵션 :
+        //      pathname : 쿼리 스트링을 제외한 현재 주소의 경로
+        //      search : 맨 앞의 ? 문자를 포함한 쿼리 스트링 값 전체
+        //      hash : 주소의 # 문자열 뒤의 값(구형 브라우저에서만 사용)
+        //      state : 페이지 이동 시 임의로 추가할 상태 값
+        //      key : location 객체의 고유 갑
+        // useLocation(), useSearchParams() 훅을 사용하여 데이터를 가져올 수 있음
+        // useLocation() 훅을 사용하여 데이터를 가져오면 원하는 파라미터 값을 가져오기 위해 직접 파싱을 진행해야 함
+        // useSearchParams() 훅을 사용하여 데이터를 가져오면 파라미터 데이터만 따로 가져올 수 있음
+        // 사용법 :
+        // 기존 url?파라미터1=값1&파라미터2=값2
+
+
+
         <BrowserRouter>
             <Routes>
                 <Route path={"/"} element={<Layout />}>
+                    {/*'/' 밑에 자식태그로 들어간다. 자식태그로 넣지않으려면 path={"/blog/"} 로 써야함*/}
                     <Route index element={<Home />} />
                     <Route path={"blogs"} element={<Blogs />} />
                     <Route path={"contact"} element={<Contact />} />
                     <Route path={"*"} element={<NoPage />} />
+                    {/*<Route path={"profile/:username/:test"} element={<Profile />}*/}
+                    <Route path={"board/:boardIdx"} element={<Board />} />
+                    <Route path={"board2"} element={<Board2 />} />
                 </Route>
             </Routes>
         </BrowserRouter>

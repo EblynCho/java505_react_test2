@@ -27,18 +27,18 @@ root.render(
         {/*<App4 />*/}
         {/*<App5 />*/}
         {/*<App6 />*/}
-        {/*<App7 />*/}
+        <App7 />
 
-        <BrowserRouter>
-            <Routes>
-                <Route path={"/"} element={<App2 />}>
-                    <Route index element={<Main />} />
-                    <Route path={"board"} element={<Board />} />
-                    <Route path={"about"} element={<Info />} />
-                    <Route path={"*"} element={<NoPage />} />
-                </Route>
-            </Routes>
-        </BrowserRouter>
+        {/*<BrowserRouter>*/}
+        {/*    <Routes>*/}
+        {/*        <Route path={"/"} element={<App2 />}>*/}
+        {/*            <Route index element={<Main />} />*/}
+        {/*            <Route path={"board"} element={<Board />} />*/}
+        {/*            <Route path={"about"} element={<Info />} />*/}
+        {/*            <Route path={"*"} element={<NoPage />} />*/}
+        {/*        </Route>*/}
+        {/*    </Routes>*/}
+        {/*</BrowserRouter>*/}
     </React.StrictMode>
 );
 
