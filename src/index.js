@@ -14,6 +14,7 @@ import NoPage from "./Pages/NoPage";
 import Board from "./Board";
 import Main from "./Main";
 import Info from "./Info";
+import App8 from "./App8";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -27,7 +28,9 @@ root.render(
         {/*<App4 />*/}
         {/*<App5 />*/}
         {/*<App6 />*/}
-        <App7 />
+        {/*<App7 />*/}
+
+        <App8 />
 
         {/*<BrowserRouter>*/}
         {/*    <Routes>*/}
